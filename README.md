@@ -7,7 +7,18 @@ Reality Compression is a portable Agent Skill that reconstructs a complex topic,
 1. a rigorous written explanation;
 2. an educational comic derived from the same validated model.
 
+The intended audience is English-speaking. By default, every user-facing artifact—including the written explanation, headings, comic captions, labels, and production brief—is generated in English, even when the prompt or source material is in another language. A different output language is used only when the user explicitly requests it.
+
 It is not a generic summarizer. A complete run must reconstruct reality before simplifying it, separate facts from inference, preserve consequential uncertainty, test a concrete case and a falsifier, pass G1–G10, and render the comic when the runtime exposes image generation.
+
+## Artifacts produced
+
+Every run produces one coordinated content package from a single validated causal model:
+
+1. **Written Reality Compression** — an English explanation covering the apparent complexity, actual mechanism, smallest useful model, causal chain, crucial distinctions, evidence and uncertainty, a concrete test, limits, practical significance, and a compressed takeaway.
+2. **Reality Compression Comic** — an English educational comic that teaches the same mechanism. When image generation is unavailable, the run instead provides a production-ready English render brief and reports `RENDER_PENDING`.
+
+In `--high-assurance` mode, the written artifact also includes sources for consequential factual claims and a compact G1–G10 audit. A run reports `COMPLETE` only when both the written explanation and rendered comic are delivered.
 
 ## Install in one command
 

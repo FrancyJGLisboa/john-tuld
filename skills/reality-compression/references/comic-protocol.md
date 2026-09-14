@@ -47,7 +47,7 @@ The brief must include:
 - desired style: polished editorial educational comic, strong visual hierarchy, legible lettering, restrained palette, no corporate stock-art look;
 - exclusions: no extra claims, no fake citations, no random equations, no logos unless necessary, no decorative jargon, no unreadable microtext.
 
-Use the user's language for visible text. Quote exact labels. Keep each label short enough for reliable rendering.
+Use English for all visible text, including captions, speech, arrows, and labels, even when the request or source is in another language. Preserve a source-language term only when it is itself instructional, and explain it in English. Use another output language only when the user explicitly requests it. Quote exact labels. Keep each label short enough for reliable rendering.
 
 ## 4. Render by runtime
 

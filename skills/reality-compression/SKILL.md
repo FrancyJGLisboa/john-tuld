@@ -5,7 +5,7 @@ description: "Reconstruct and compress a complex topic or supplied source into t
 
 # Reality Compression
 
-Turn a topic, question, or pasted source into a compact model that remains useful for explanation, prediction, or decision. Complete both deliverables: rigorous text and a comic derived from the same model.
+Turn a topic, question, or pasted source into a compact model for an English-speaking audience that remains useful for explanation, prediction, or decision. Complete both deliverables: rigorous English-language text and an English-language comic derived from the same model.
 
 ## Invocation contract
 
@@ -26,7 +26,11 @@ Optional modes:
 - `--from-source`: stay within supplied material; identify missing evidence rather than filling gaps from memory.
 - `--high-assurance`: show the gate audit and source consequential factual claims when retrieval is available.
 
-Infer language from the user and keep text inside the comic in that language. Ask a question only when ambiguity would materially change the model and cannot be handled with explicit branches.
+## Audience and language
+
+The target audience is English-speaking. Produce the written explanation, section headings, comic brief, captions, labels, and all other instructional content in clear natural English, even when the request or supplied source is in another language. Preserve non-English proper names and quote source-language terms only when they are necessary to the explanation; translate or explain them in English. Use another output language only when the user explicitly requests it.
+
+Do not infer the output language from the language of the prompt. Ask a question only when ambiguity would materially change the model and cannot be handled with explicit branches.
 
 ## Hard invariants
 
@@ -47,7 +51,7 @@ Infer language from the user and keep text inside the comic in that language. As
 
 Perform these stages in order. They may remain internal unless a visible audit helps the user.
 
-1. **Frame the target.** Identify the phenomenon, intended audience, desired mode, supplied evidence, time sensitivity, and any decision the model must support.
+1. **Frame the target.** Identify the phenomenon, desired mode, supplied evidence, time sensitivity, and any decision the model must support. Assume an English-speaking general audience unless the user specifies a different expertise level or explicitly requests another output language.
 2. **Reconstruct reality.** Determine the operative entities, constraints, incentives, sequence, feedback loops, and measurable outcomes. For supplied content, reconstruct the author's actual claim before evaluating it.
 3. **Resolve truth status.** Distinguish what the input says, what is externally established, what is inferred, and what remains uncertain. Retrieve current evidence when required and allowed. In `--from-source`, do not introduce unsupported outside claims.
 4. **Find the compression kernel.** Express the smallest causal model that still predicts the important behavior. Delete detail only if removing it does not change the model's conclusions in normal use.

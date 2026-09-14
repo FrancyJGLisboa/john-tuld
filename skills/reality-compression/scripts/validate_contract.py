@@ -24,6 +24,7 @@ REQUIRED_SKILL_MARKERS = (
     "RENDER_PENDING",
     "BLOCKED",
     "ChatGPT with ImageGen",
+    "The target audience is English-speaking",
 )
 
 
