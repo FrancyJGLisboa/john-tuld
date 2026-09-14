@@ -1,0 +1,36 @@
+{
+  "name": "reality-compression",
+  "version": "1.0.0",
+  "description": "Reconstruct complex topics into truthful causal models and matching educational comics.",
+  "author": {
+    "name": "FrancyJGLisboa",
+    "url": "https://github.com/FrancyJGLisboa"
+  },
+  "homepage": "https://github.com/FrancyJGLisboa/reality-compression",
+  "repository": "https://github.com/FrancyJGLisboa/reality-compression",
+  "license": "MIT",
+  "keywords": [
+    "causal-reasoning",
+    "explanation",
+    "agent-skill",
+    "educational-comic"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Reality Compression",
+    "shortDescription": "Compress complexity without distorting reality.",
+    "longDescription": "Reconstruct a topic, verify its causal mechanism, preserve uncertainty and limits, then produce a rigorous explanation and an educational comic from the same validated model.",
+    "developerName": "FrancyJGLisboa",
+    "category": "Productivity",
+    "capabilities": [
+      "Research",
+      "Image generation"
+    ],
+    "defaultPrompt": [
+      "Use $reality-compression to explain a complex topic and render its educational comic.",
+      "Use $reality-compression --decision to clarify this decision.",
+      "Use $reality-compression --expert to reconstruct this technical system."
+    ],
+    "brandColor": "#5B4B8A"
+  }
+}

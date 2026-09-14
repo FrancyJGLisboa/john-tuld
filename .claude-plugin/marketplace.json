@@ -1,0 +1,31 @@
+{
+  "name": "francyjglisboa-skills",
+  "owner": {
+    "name": "FrancyJGLisboa",
+    "url": "https://github.com/FrancyJGLisboa"
+  },
+  "description": "Agent skills published by FrancyJGLisboa.",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "reality-compression",
+      "displayName": "Reality Compression",
+      "source": "./",
+      "description": "Reconstruct complex topics into truthful causal models and matching educational comics.",
+      "version": "1.0.0",
+      "author": {
+        "name": "FrancyJGLisboa",
+        "url": "https://github.com/FrancyJGLisboa"
+      },
+      "homepage": "https://github.com/FrancyJGLisboa/reality-compression",
+      "repository": "https://github.com/FrancyJGLisboa/reality-compression",
+      "license": "MIT",
+      "category": "Productivity",
+      "tags": [
+        "reasoning",
+        "education",
+        "research"
+      ]
+    }
+  ]
+}
