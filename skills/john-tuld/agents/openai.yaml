@@ -1,8 +1,8 @@
 interface:
-  display_name: "John Tuld"
-  short_description: "Explain technical findings to senior decision-makers"
+  display_name: "John Tuld — Explain TO the executive"
+  short_description: "Be the analyst explaining to a nontechnical executive"
   brand_color: "#5B4B8A"
-  default_prompt: "Use $john-tuld to turn these technical findings into a plain-language executive brief and matching educational comic: {topic or pasted content}"
+  default_prompt: "Use $john-tuld to explain these findings from the analyst's perspective to a nontechnical executive, with a matching comic in which the executive receives the explanation: {topic or pasted content}"
 
 policy:
   allow_implicit_invocation: true

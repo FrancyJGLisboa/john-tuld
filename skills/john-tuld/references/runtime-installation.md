@@ -16,7 +16,7 @@ For local Codex and ChatGPT Desktop discovery, install the folder at:
 ~/.agents/skills/john-tuld/
 ```
 
-Keep `agents/openai.yaml` inside the package. Invoke with `$john-tuld` or `John Tuld: …`.
+Keep `agents/openai.yaml` inside the package. Invoke with `$john-tuld` or `Explain to John Tuld: …`. The skill name identifies the listener; the analyst remains the explanatory speaker.
 
 For the reference experience, the runtime must expose native image generation to the agent. The package does not emulate ImageGen and does not promise equivalent comic quality elsewhere.
 

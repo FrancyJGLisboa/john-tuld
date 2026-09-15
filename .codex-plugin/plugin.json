@@ -1,7 +1,7 @@
 {
   "name": "john-tuld",
-  "version": "2.0.2",
-  "description": "Help analysts explain technical findings to senior decision-makers through plain-language briefs and matching educational comics.",
+  "version": "2.0.3",
+  "description": "Help the analyst explain complex findings TO a nontechnical executive. John Tuld is the recipient, never the expert narrator, in both the brief and comic.",
   "author": {
     "name": "FrancyJGLisboa",
     "url": "https://github.com/FrancyJGLisboa"
@@ -18,9 +18,9 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "John Tuld",
-    "shortDescription": "Explain technical findings to senior decision-makers.",
-    "longDescription": "Turn complex analysis into an executive brief and an educational comic. Explain the mechanism, stakes, uncertainty, and leadership question in plain language, with a takeaway the listener can repeat accurately.",
+    "displayName": "John Tuld — Explain TO the executive",
+    "shortDescription": "Be the analyst explaining to a nontechnical executive.",
+    "longDescription": "Explain complex findings from the analyst's perspective to the executive receiving them. John Tuld represents the listener. Deliver Reality Compression for the audience and a matching visual explanation; the analyst or neutral captions explain the mechanism, while the executive listens or asks questions.",
     "developerName": "FrancyJGLisboa",
     "category": "Productivity",
     "capabilities": [
@@ -28,9 +28,9 @@
       "Image generation"
     ],
     "defaultPrompt": [
-      "Use $john-tuld to explain these technical findings to nontechnical leadership and render the matching educational comic.",
-      "Use $john-tuld --decision to prepare a plain-language brief for this leadership decision.",
-      "Use $john-tuld --expert to reconstruct this system for a technical audience."
+      "Use $john-tuld to explain these findings as the analyst briefing a nontechnical executive, and render a comic with the same speaker and recipient roles.",
+      "Use $john-tuld --decision to write an analyst's briefing for this leadership decision; John Tuld represents the listener.",
+      "Use $john-tuld --expert to explain this system from the analyst's perspective to the technical audience I specify."
     ],
     "brandColor": "#5B4B8A"
   }

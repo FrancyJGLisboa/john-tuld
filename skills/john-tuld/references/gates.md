@@ -6,9 +6,9 @@ Run these gates after constructing the candidate model and again after the comic
 
 ### G1 — Reality reconstructed
 
-**Pass:** The artifact identifies the actual phenomenon or source claim, its scope, actors or components, constraints, and relevant context. It does not answer a nearby but different question.
+**Pass:** The artifact identifies the actual phenomenon or source claim, its scope, actors or components, constraints, and relevant context. It preserves the analyst as speaker and the intended executive as recipient. It does not answer a nearby but different question.
 
-**Fail signals:** Keyword summary; treating a disputed claim as reality; ignoring the user's decision or source boundaries.
+**Fail signals:** Keyword summary; treating a disputed claim as reality; ignoring the user's decision or source boundaries; presenting John Tuld as the explaining persona instead of the listener.
 
 **Repair:** Restate the target in one sentence. Branch explicitly if two interpretations remain viable.
 
@@ -80,11 +80,11 @@ Run these gates after constructing the candidate model and again after the comic
 
 ### G10 — Comic parity
 
-**Pass:** The comic preserves the same entities, causal direction, distinctions, uncertainty, and takeaway as the validated text. It is legible and understandable without inventing claims.
+**Pass:** The comic preserves the same entities, causal direction, distinctions, uncertainty, takeaway, and speaker/recipient roles as the validated text. The analyst or neutral captions explain; the executive receives the explanation. John Tuld, if present, listens or asks questions. It is legible and understandable without inventing claims.
 
-**Fail signals:** Decorative poster; text-heavy infographic; metaphor contradicts mechanism; omitted uncertainty changes meaning; illegible labels.
+**Fail signals:** Decorative poster; text-heavy infographic; metaphor contradicts mechanism; omitted uncertainty changes meaning; illegible labels; explanatory speech assigned to John Tuld; a title, byline, or caption that credits him as author or teacher.
 
-**Repair:** Simplify the panels, not the truth. Regenerate once when a correctable rendering error materially damages the teaching goal. If the tool still fails, return `RENDER_PENDING` with the exact corrected brief.
+**Repair:** Simplify the panels, not the truth. Correct speaker assignments and bubble-tail targets in the render brief when roles are reversed. Regenerate once when a correctable rendering error materially damages the teaching goal. If the tool still fails, return `RENDER_PENDING` with the exact corrected brief.
 
 ## Completion rule
 

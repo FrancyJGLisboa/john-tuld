@@ -6,9 +6,11 @@
 
 *AI-generated meme inspired by Margin Call (2011); caption paraphrased.*
 
-**Explain the technical work so leadership can understand it, decide, and explain it onward.**
+**You are the analyst. John Tuld is the audience. Explain the technical work TO him.**
 
 John Tuld is a portable Agent Skill for analysts, engineers, researchers, and technical specialists communicating with executives and other senior decision-makers. It turns complex findings into plain language while preserving how things work, what is at stake, and what remains uncertain.
+
+The analyst is always the explaining voice; John Tuld represents the recipient of the reality compression. The skill does not impersonate him as an expert or narrator. Use the actual executive or stakeholder named in the request, or nontechnical leadership by default. If he appears in a comic, he listens or asks questions while the analyst explains.
 
 The name comes from John Tuld, played by Jeremy Irons in *Margin Call* (2011), and his request for an explanation as simple as one for a golden retriever. The principle is to assume no technical background and give the listener enough understanding to judge the consequences. [Scene reference](https://www.imdb.com/title/tt1615147/characters/nm0000460/).
 
@@ -25,14 +27,18 @@ It is not a generic summarizer. A complete run must reconstruct reality before s
 
 Every run produces one coordinated content package from a single validated causal model:
 
-1. **John Tuld Brief** — an English executive explanation that leads with the finding and stakes, explains the mechanism through a concrete example, preserves evidence and uncertainty, and closes with the leadership question when one exists and a sentence the listener can repeat accurately.
-2. **John Tuld Comic** — an English educational comic that teaches the same mechanism. When image generation is unavailable, the run instead provides a production-ready English render brief and reports `RENDER_PENDING`.
+1. **Reality Compression for [Audience]** — an English explanation from the analyst to the executive that leads with the finding and stakes, explains the mechanism through a concrete example, preserves evidence and uncertainty, and closes with the leadership question when one exists and a sentence the listener can repeat accurately.
+2. **Visual Explanation for [Audience]** — an English educational comic that teaches the same mechanism to the same recipient. The analyst or neutral captions explain; John Tuld, if depicted, receives the explanation. When image generation is unavailable, the run instead provides a production-ready English render brief and reports `RENDER_PENDING`.
+
+For example, a briefing requested for the COO is titled `REALITY COMPRESSION FOR THE COO`, followed by `VISUAL EXPLANATION FOR THE COO`. John Tuld remains the skill's name, not the credited author of its outputs.
 
 In `--high-assurance` mode, the written artifact also includes sources for consequential factual claims and a compact G1–G10 audit. A run reports `COMPLETE` only when both the written explanation and rendered comic are delivered.
 
 ## Download skills.zip
 
 **[Download skills.zip](https://github.com/FrancyJGLisboa/john-tuld/raw/refs/heads/main/skills.zip)**
+
+Already imported an earlier ZIP? Replace that imported copy with the current download. Repository updates do not change files you previously downloaded.
 
 This is the standalone skill bundle. It contains one top-level `john-tuld/` folder with `SKILL.md`, all supporting references and scripts, OpenAI UI metadata, the license, and the version. It follows the [single-folder skill ZIP format documented by OpenAI](https://developers.openai.com/api/docs/guides/tools-skills#create-a-skill).
 
@@ -97,7 +103,7 @@ Claude Code after the local installation:
 Also supported by the skill contract:
 
 ```text
-John Tuld: Explain lossy compression to a nontechnical product leader
+$john-tuld Explain lossy compression to a nontechnical product leader
 /john-tuld --decision Should we turn this prototype into a shared service?
 /john-tuld --from-source [paste source]
 /john-tuld --expert Git and CI/CD

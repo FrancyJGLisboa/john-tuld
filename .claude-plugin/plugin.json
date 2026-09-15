@@ -1,7 +1,7 @@
 {
   "name": "john-tuld",
-  "description": "Help analysts explain technical findings to senior decision-makers through plain-language briefs and matching educational comics.",
-  "version": "2.0.2",
+  "description": "Help the analyst explain complex findings TO a nontechnical executive. John Tuld is the recipient, never the expert narrator, in both the brief and comic.",
+  "version": "2.0.3",
   "author": {
     "name": "FrancyJGLisboa",
     "url": "https://github.com/FrancyJGLisboa"
