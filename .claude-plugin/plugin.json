@@ -1,13 +1,13 @@
 {
   "name": "john-tuld",
   "description": "Help analysts explain technical findings to senior decision-makers through plain-language briefs and matching educational comics.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": {
     "name": "FrancyJGLisboa",
     "url": "https://github.com/FrancyJGLisboa"
   },
-  "homepage": "https://github.com/FrancyJGLisboa/reality-compression",
-  "repository": "https://github.com/FrancyJGLisboa/reality-compression",
+  "homepage": "https://github.com/FrancyJGLisboa/john-tuld",
+  "repository": "https://github.com/FrancyJGLisboa/john-tuld",
   "license": "MIT",
   "keywords": [
     "executive-communication",

@@ -1,6 +1,10 @@
 # John Tuld
 
-[![Validate](https://github.com/FrancyJGLisboa/reality-compression/actions/workflows/validate.yml/badge.svg)](https://github.com/FrancyJGLisboa/reality-compression/actions/workflows/validate.yml)
+[![Validate](https://github.com/FrancyJGLisboa/john-tuld/actions/workflows/validate.yml/badge.svg)](https://github.com/FrancyJGLisboa/john-tuld/actions/workflows/validate.yml)
+
+![John Tuld asks the analyst: Please explain it to me as if I were a golden retriever.](assets/john-tuld-golden-retriever-meme.png)
+
+*AI-generated meme inspired by Margin Call (2011); caption paraphrased.*
 
 **Explain the technical work so leadership can understand it, decide, and explain it onward.**
 
@@ -31,17 +35,17 @@ In `--high-assurance` mode, the written artifact also includes sources for conse
 Install for both Codex/ChatGPT Desktop and Claude Code:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/FrancyJGLisboa/reality-compression/main/skills/john-tuld/scripts/install.py | python3 - --runtime all
+curl -fsSL https://raw.githubusercontent.com/FrancyJGLisboa/john-tuld/main/skills/john-tuld/scripts/install.py | python3 - --runtime all
 ```
 
 Install for only one runtime:
 
 ```bash
 # Codex and ChatGPT Desktop
-curl -fsSL https://raw.githubusercontent.com/FrancyJGLisboa/reality-compression/main/skills/john-tuld/scripts/install.py | python3 - --runtime codex
+curl -fsSL https://raw.githubusercontent.com/FrancyJGLisboa/john-tuld/main/skills/john-tuld/scripts/install.py | python3 - --runtime codex
 
 # Claude Code
-curl -fsSL https://raw.githubusercontent.com/FrancyJGLisboa/reality-compression/main/skills/john-tuld/scripts/install.py | python3 - --runtime claude
+curl -fsSL https://raw.githubusercontent.com/FrancyJGLisboa/john-tuld/main/skills/john-tuld/scripts/install.py | python3 - --runtime claude
 ```
 
 The installer uses the official personal skill locations:
@@ -95,7 +99,7 @@ The skill and plugin are now named `john-tuld`. Install using the commands above
 This repository is also a Claude Code marketplace. Register it and install the namespaced plugin:
 
 ```bash
-claude plugin marketplace add FrancyJGLisboa/reality-compression
+claude plugin marketplace add FrancyJGLisboa/john-tuld
 claude plugin install john-tuld@francyjglisboa-skills
 ```
 
@@ -131,6 +135,8 @@ A prompt, panel list, Mermaid diagram, or ASCII sketch is never labeled as a ren
 │   └── plugin.json
 ├── .codex-plugin/
 │   └── plugin.json
+├── assets/
+│   └── john-tuld-golden-retriever-meme.png
 ├── skills/
 │   └── john-tuld/
 │       ├── SKILL.md

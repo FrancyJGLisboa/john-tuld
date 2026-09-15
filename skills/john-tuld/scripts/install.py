@@ -17,7 +17,7 @@ from pathlib import Path
 
 SKILL_NAME = "john-tuld"
 ARCHIVE_URL = (
-    "https://github.com/FrancyJGLisboa/reality-compression/"
+    "https://github.com/FrancyJGLisboa/john-tuld/"
     "archive/refs/heads/main.zip"
 )
 MAX_ARCHIVE_BYTES = 20 * 1024 * 1024
