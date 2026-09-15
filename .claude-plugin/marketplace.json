@@ -5,14 +5,14 @@
     "url": "https://github.com/FrancyJGLisboa"
   },
   "description": "Agent skills published by FrancyJGLisboa.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "plugins": [
     {
       "name": "john-tuld",
       "displayName": "John Tuld",
       "source": "./",
       "description": "Help analysts explain technical findings to senior decision-makers through plain-language briefs and matching educational comics.",
-      "version": "2.0.1",
+      "version": "2.0.2",
       "author": {
         "name": "FrancyJGLisboa",
         "url": "https://github.com/FrancyJGLisboa"

@@ -30,6 +30,25 @@ Every run produces one coordinated content package from a single validated causa
 
 In `--high-assurance` mode, the written artifact also includes sources for consequential factual claims and a compact G1–G10 audit. A run reports `COMPLETE` only when both the written explanation and rendered comic are delivered.
 
+## Download skills.zip
+
+**[Download skills.zip](https://github.com/FrancyJGLisboa/john-tuld/raw/refs/heads/main/skills.zip)**
+
+This is the standalone skill bundle. It contains one top-level `john-tuld/` folder with `SKILL.md`, all supporting references and scripts, OpenAI UI metadata, the license, and the version. It follows the [single-folder skill ZIP format documented by OpenAI](https://developers.openai.com/api/docs/guides/tools-skills#create-a-skill).
+
+For ChatGPT web, use this file with a dedicated skill ZIP importer **if your account provides one**, keeping the archive zipped. Standalone ZIP import has not been verified in ChatGPT web for this package. OpenAI's [current product documentation](https://learn.chatgpt.com/docs/build-skills) describes standalone skills for desktop/Codex and plugin-based distribution for ChatGPT web; see [Native plugin installation](#native-plugin-installation) for the plugin package.
+
+To install manually in a local skill-capable runtime, extract `john-tuld/` into its personal skills directory. The installer below also remains available.
+
+Maintainers: rebuild the committed download whenever the skill, `LICENSE`, or `VERSION` changes:
+
+```bash
+python3 scripts/build_skill_zip.py
+python3 scripts/build_skill_zip.py --check
+```
+
+CI checks that the ZIP contains exactly the current skill files and fails when it is stale or damaged. Repository images, plugin manifests, and development files are excluded from this standalone bundle.
+
 ## Install in one command
 
 Install for both Codex/ChatGPT Desktop and Claude Code:
@@ -144,6 +163,7 @@ A prompt, panel list, Mermaid diagram, or ASCII sketch is never labeled as a ren
 │       ├── references/
 │       └── scripts/
 ├── tests/
+├── skills.zip
 └── LICENSE
 ```
 
@@ -153,6 +173,7 @@ A prompt, panel list, Mermaid diagram, or ASCII sketch is never labeled as a ren
 
 ```bash
 python3 skills/john-tuld/scripts/validate_contract.py skills/john-tuld
+python3 scripts/build_skill_zip.py --check
 python3 -m unittest discover -s tests -v
 ```
 

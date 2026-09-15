@@ -1,4 +1,5 @@
 __pycache__/
 *.py[cod]
 *.zip
+!/skills.zip
 .DS_Store

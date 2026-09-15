@@ -22,5 +22,7 @@ jobs:
         run: python3 skills/john-tuld/scripts/validate_contract.py skills/john-tuld
       - name: Validate plugin package
         run: python3 scripts/validate_package.py
-      - name: Test installer
+      - name: Verify downloadable skill ZIP
+        run: python3 scripts/build_skill_zip.py --check
+      - name: Test installer and archive
         run: python3 -m unittest discover -s tests -v

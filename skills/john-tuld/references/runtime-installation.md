@@ -2,6 +2,12 @@
 
 The canonical skill folder contains `SKILL.md`, OpenAI UI metadata under `agents/`, and conditional guidance under `references/`. The GitHub repository wraps this same folder in both OpenAI and Claude plugin manifests. No API key or runtime-specific prompt fork is required.
 
+## Downloadable skill bundle
+
+Download [skills.zip](https://github.com/FrancyJGLisboa/john-tuld/raw/refs/heads/main/skills.zip) for the standalone skill, including its license and version. The archive contains one top-level `john-tuld/` folder and preserves all relative reference paths.
+
+Use the ZIP directly in a dedicated standalone skill importer when one is available, or extract that folder into a local runtime's personal skills directory. ChatGPT web ZIP import is not verified for this package; OpenAI's [current documentation](https://learn.chatgpt.com/docs/build-skills) describes web distribution through plugins. A standalone skill ZIP and a plugin package use different layouts.
+
 ## ChatGPT / OpenAI skill-capable environments
 
 For local Codex and ChatGPT Desktop discovery, install the folder at:
