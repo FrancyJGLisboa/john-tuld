@@ -7,10 +7,10 @@ The canonical skill folder contains `SKILL.md`, OpenAI UI metadata under `agents
 For local Codex and ChatGPT Desktop discovery, install the folder at:
 
 ```text
-~/.agents/skills/reality-compression/
+~/.agents/skills/john-tuld/
 ```
 
-Keep `agents/openai.yaml` inside the package. Invoke with `$reality-compression` or `Reality Compression: …`.
+Keep `agents/openai.yaml` inside the package. Invoke with `$john-tuld` or `John Tuld: …`.
 
 For the reference experience, the runtime must expose native image generation to the agent. The package does not emulate ImageGen and does not promise equivalent comic quality elsewhere.
 
@@ -19,7 +19,7 @@ For the reference experience, the runtime must expose native image generation to
 Copy the complete folder into the official user-level skills directory:
 
 ```text
-~/.agents/skills/reality-compression/
+~/.agents/skills/john-tuld/
 ```
 
 Or run from the unpacked package directory:
@@ -35,7 +35,7 @@ Restart or refresh skill discovery if the runtime does not detect new skills dyn
 Copy the complete folder into Claude Code's personal skills directory:
 
 ```text
-~/.claude/skills/reality-compression/
+~/.claude/skills/john-tuld/
 ```
 
 Or run:
@@ -46,7 +46,7 @@ python3 scripts/install.py --runtime claude
 
 Use `--target-claude /absolute/path/to/skills` to override the destination. Without an image generator, the required terminal state is `RENDER_PENDING`, accompanied by the complete comic brief.
 
-The GitHub repository also includes a Claude marketplace manifest. Plugin installations use the namespaced invocation `/reality-compression:reality-compression`.
+The GitHub repository also includes a Claude marketplace manifest. Plugin installations use the namespaced invocation `/john-tuld:john-tuld`.
 
 ## Portable/manual use
 
@@ -65,5 +65,5 @@ python3 scripts/validate_contract.py .
 When the OpenAI skill validator is available, also run:
 
 ```bash
-quick_validate.py /path/to/reality-compression
+quick_validate.py /path/to/john-tuld
 ```

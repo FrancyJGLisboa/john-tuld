@@ -1,10 +1,16 @@
-# Reality Compression
+# John Tuld
 
 [![Validate](https://github.com/FrancyJGLisboa/reality-compression/actions/workflows/validate.yml/badge.svg)](https://github.com/FrancyJGLisboa/reality-compression/actions/workflows/validate.yml)
 
-Reality Compression is a portable Agent Skill that reconstructs a complex topic, identifies the smallest truthful causal model, stress-tests it, and produces two coordinated outputs:
+**Explain the technical work so leadership can understand it, decide, and explain it onward.**
 
-1. a rigorous written explanation;
+John Tuld is a portable Agent Skill for analysts, engineers, researchers, and technical specialists communicating with executives and other senior decision-makers. It turns complex findings into plain language while preserving how things work, what is at stake, and what remains uncertain.
+
+The name comes from John Tuld, played by Jeremy Irons in *Margin Call* (2011), and his request for an explanation as simple as one for a golden retriever. The principle is to assume no technical background and give the listener enough understanding to judge the consequences. [Scene reference](https://www.imdb.com/title/tt1615147/characters/nm0000460/).
+
+The skill reconstructs the topic, identifies the smallest truthful causal model, stress-tests it, and produces two coordinated outputs:
+
+1. a plain-language executive brief;
 2. an educational comic derived from the same validated model.
 
 The intended audience is English-speaking. By default, every user-facing artifact—including the written explanation, headings, comic captions, labels, and production brief—is generated in English, even when the prompt or source material is in another language. A different output language is used only when the user explicitly requests it.
@@ -15,8 +21,8 @@ It is not a generic summarizer. A complete run must reconstruct reality before s
 
 Every run produces one coordinated content package from a single validated causal model:
 
-1. **Written Reality Compression** — an English explanation covering the apparent complexity, actual mechanism, smallest useful model, causal chain, crucial distinctions, evidence and uncertainty, a concrete test, limits, practical significance, and a compressed takeaway.
-2. **Reality Compression Comic** — an English educational comic that teaches the same mechanism. When image generation is unavailable, the run instead provides a production-ready English render brief and reports `RENDER_PENDING`.
+1. **John Tuld Brief** — an English executive explanation that leads with the finding and stakes, explains the mechanism through a concrete example, preserves evidence and uncertainty, and closes with the leadership question when one exists and a sentence the listener can repeat accurately.
+2. **John Tuld Comic** — an English educational comic that teaches the same mechanism. When image generation is unavailable, the run instead provides a production-ready English render brief and reports `RENDER_PENDING`.
 
 In `--high-assurance` mode, the written artifact also includes sources for consequential factual claims and a compact G1–G10 audit. A run reports `COMPLETE` only when both the written explanation and rendered comic are delivered.
 
@@ -25,30 +31,30 @@ In `--high-assurance` mode, the written artifact also includes sources for conse
 Install for both Codex/ChatGPT Desktop and Claude Code:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/FrancyJGLisboa/reality-compression/main/skills/reality-compression/scripts/install.py | python3 - --runtime all
+curl -fsSL https://raw.githubusercontent.com/FrancyJGLisboa/reality-compression/main/skills/john-tuld/scripts/install.py | python3 - --runtime all
 ```
 
 Install for only one runtime:
 
 ```bash
 # Codex and ChatGPT Desktop
-curl -fsSL https://raw.githubusercontent.com/FrancyJGLisboa/reality-compression/main/skills/reality-compression/scripts/install.py | python3 - --runtime codex
+curl -fsSL https://raw.githubusercontent.com/FrancyJGLisboa/reality-compression/main/skills/john-tuld/scripts/install.py | python3 - --runtime codex
 
 # Claude Code
-curl -fsSL https://raw.githubusercontent.com/FrancyJGLisboa/reality-compression/main/skills/reality-compression/scripts/install.py | python3 - --runtime claude
+curl -fsSL https://raw.githubusercontent.com/FrancyJGLisboa/reality-compression/main/skills/john-tuld/scripts/install.py | python3 - --runtime claude
 ```
 
 The installer uses the official personal skill locations:
 
-- Codex and ChatGPT Desktop: `~/.agents/skills/reality-compression`
-- Claude Code: `~/.claude/skills/reality-compression`
+- Codex and ChatGPT Desktop: `~/.agents/skills/john-tuld`
+- Claude Code: `~/.claude/skills/john-tuld`
 
 It refuses to overwrite an existing installation. To update intentionally, add `--force`; replacement is staged and validated before the current copy is changed.
 
 If you prefer to inspect code before running it, clone the repository and use:
 
 ```bash
-python3 skills/reality-compression/scripts/install.py --runtime all
+python3 skills/john-tuld/scripts/install.py --runtime all
 ```
 
 ## Invoke
@@ -56,24 +62,31 @@ python3 skills/reality-compression/scripts/install.py --runtime all
 Codex or ChatGPT Desktop:
 
 ```text
-$reality-compression --expert Git and CI/CD
+$john-tuld Explain our deployment failure analysis to the COO: [paste findings]
 ```
 
 Claude Code after the local installation:
 
 ```text
-/reality-compression --expert Git and CI/CD
+/john-tuld Explain our deployment failure analysis to the COO: [paste findings]
 ```
 
 Also supported by the skill contract:
 
 ```text
-Reality Compression: lossy compression
-/reality-compression --decision Should we turn this prototype into a shared service?
-/reality-compression --from-source [paste source]
+John Tuld: Explain lossy compression to a nontechnical product leader
+/john-tuld --decision Should we turn this prototype into a shared service?
+/john-tuld --from-source [paste source]
+/john-tuld --expert Git and CI/CD
 ```
 
 Modes: `--balanced` (default), `--eli5`, `--expert`, `--decision`, `--from-source`, and `--high-assurance`.
+
+The default is a briefing for nontechnical leadership. Use `--expert` when the intended reader needs technical vocabulary, equations, or detailed edge cases.
+
+## Moving from Reality Compression
+
+The skill and plugin are now named `john-tuld`. Install using the commands above and replace previous `$reality-compression` or `/reality-compression` invocations with `$john-tuld` or `/john-tuld`. Existing installations under the old name remain separate; the installer does not rename or delete them. After verifying the new skill, retire the old copy through your runtime's skill or plugin management.
 
 ## Native plugin installation
 
@@ -83,13 +96,13 @@ This repository is also a Claude Code marketplace. Register it and install the n
 
 ```bash
 claude plugin marketplace add FrancyJGLisboa/reality-compression
-claude plugin install reality-compression@francyjglisboa-skills
+claude plugin install john-tuld@francyjglisboa-skills
 ```
 
 The plugin invocation is:
 
 ```text
-/reality-compression:reality-compression
+/john-tuld:john-tuld
 ```
 
 ### ChatGPT and Codex plugin
@@ -119,7 +132,7 @@ A prompt, panel list, Mermaid diagram, or ASCII sketch is never labeled as a ren
 ├── .codex-plugin/
 │   └── plugin.json
 ├── skills/
-│   └── reality-compression/
+│   └── john-tuld/
 │       ├── SKILL.md
 │       ├── agents/openai.yaml
 │       ├── references/
@@ -128,12 +141,12 @@ A prompt, panel list, Mermaid diagram, or ASCII sketch is never labeled as a ren
 └── LICENSE
 ```
 
-`skills/reality-compression/SKILL.md` is the canonical behavioral contract. Both plugin manifests point to the same skill; there are no divergent Claude and OpenAI prompt copies.
+`skills/john-tuld/SKILL.md` is the canonical behavioral contract. Both plugin manifests point to the same skill; there are no divergent Claude and OpenAI prompt copies.
 
 ## Validate
 
 ```bash
-python3 skills/reality-compression/scripts/validate_contract.py skills/reality-compression
+python3 skills/john-tuld/scripts/validate_contract.py skills/john-tuld
 python3 -m unittest discover -s tests -v
 ```
 

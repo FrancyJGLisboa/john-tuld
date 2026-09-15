@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install Reality Compression from this checkout or directly from GitHub."""
+"""Install John Tuld from this checkout or directly from GitHub."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ import zipfile
 from pathlib import Path
 
 
-SKILL_NAME = "reality-compression"
+SKILL_NAME = "john-tuld"
 ARCHIVE_URL = (
     "https://github.com/FrancyJGLisboa/reality-compression/"
     "archive/refs/heads/main.zip"
@@ -72,8 +72,8 @@ def validate_source(source: Path) -> None:
         raise RuntimeError("Invalid skill package; missing: " + ", ".join(missing))
 
     frontmatter = (source / "SKILL.md").read_text(encoding="utf-8")[:2048]
-    if "name: reality-compression" not in frontmatter:
-        raise RuntimeError("Invalid SKILL.md: expected name: reality-compression")
+    if "name: john-tuld" not in frontmatter:
+        raise RuntimeError("Invalid SKILL.md: expected name: john-tuld")
 
 
 def local_source() -> Path | None:
@@ -88,7 +88,7 @@ def local_source() -> Path | None:
 def download_source(work_dir: Path) -> Path:
     request = urllib.request.Request(
         ARCHIVE_URL,
-        headers={"User-Agent": "reality-compression-installer/1.0"},
+        headers={"User-Agent": "john-tuld-installer/1.0"},
     )
     with urllib.request.urlopen(request, timeout=60) as response:
         payload = response.read(MAX_ARCHIVE_BYTES + 1)
@@ -99,7 +99,7 @@ def download_source(work_dir: Path) -> Path:
         marker_suffix = f"/skills/{SKILL_NAME}/SKILL.md"
         markers = [name for name in archive.namelist() if name.endswith(marker_suffix)]
         if len(markers) != 1:
-            raise RuntimeError("Archive does not contain one canonical Reality Compression skill")
+            raise RuntimeError("Archive does not contain one canonical John Tuld skill")
 
         prefix = markers[0][: -len("SKILL.md")]
         source = work_dir / SKILL_NAME
@@ -190,7 +190,7 @@ def main(argv: list[str] | None = None) -> int:
         else:
             source = local_source()
             if source is None:
-                temporary_download = tempfile.TemporaryDirectory(prefix="reality-compression-download-")
+                temporary_download = tempfile.TemporaryDirectory(prefix="john-tuld-download-")
                 source = download_source(Path(temporary_download.name))
 
         validate_source(source)
@@ -213,7 +213,7 @@ def main(argv: list[str] | None = None) -> int:
         for runtime, parent in targets:
             installed = install_one(source, parent, args.force)
             print(f"Installed for {runtime}: {installed}")
-        print("Invoke with $reality-compression in Codex or /reality-compression in Claude Code.")
+        print("Invoke with $john-tuld in Codex or /john-tuld in Claude Code.")
         return 0
     except (OSError, RuntimeError, urllib.error.URLError, zipfile.BadZipFile) as error:
         print(f"Installation failed: {error}", file=sys.stderr)

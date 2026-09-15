@@ -2,10 +2,25 @@
 
 These examples test behavior, not exact phrasing.
 
+## Executive briefing — default audience
+
+```text
+$john-tuld --from-source Explain this to the COO:
+In a two-week internal test, our release checks found 9 of 12 deliberately introduced failures. The previous checks found 5 of the same 12. The new checks add 8 minutes per release. We have not measured customer incidents or tested the larger service yet. The team wants approval for a limited pilot.
+```
+
+Expected behavior:
+
+- Opens with the finding and leadership question: the new checks caught more failures in the test but take longer, and the team is asking for a limited pilot.
+- Explains the mechanism in ordinary words: automatic checks inspect a change before release; broader checks can catch more problems and take more time.
+- Keeps the numbers in context: 9 versus 5 of the same 12 planted failures over two weeks, 8 extra minutes per release, and 3 planted failures still missed.
+- Does not claim fewer customer incidents, guaranteed production reliability, annual savings, or that a small test proves the result for the larger service. Any support for a pilot is labeled a recommendation contingent on the missing evidence and cost being acceptable.
+- Ends with a sentence a leader can repeat without dropping those limits. The comic shows the same tradeoff; it does not imply the release process is now failure-proof.
+
 ## 1. Conceptual topic — balanced
 
 ```text
-/reality-compression lossy compression
+/john-tuld lossy compression
 ```
 
 Expected behavior:
@@ -20,7 +35,7 @@ Expected behavior:
 ## 2. Technical workflow — expert
 
 ```text
-/reality-compression --expert Git and CI/CD
+/john-tuld --expert Git and CI/CD
 ```
 
 Expected behavior:
@@ -34,7 +49,7 @@ Expected behavior:
 ## 3. Decision mode
 
 ```text
-/reality-compression --decision Should a research team turn a prototype into a shared internal tool?
+/john-tuld --decision Should a research team turn a prototype into a shared internal tool?
 ```
 
 Expected behavior:
@@ -47,7 +62,7 @@ Expected behavior:
 ## 4. Supplied source
 
 ```text
-/reality-compression --from-source
+/john-tuld --from-source
 [paste paper, transcript, report, or meeting notes]
 ```
 
@@ -61,7 +76,7 @@ Expected behavior:
 ## 5. Gate failure
 
 ```text
-/reality-compression --from-source
+/john-tuld --from-source
 “Everyone knows the new method doubles accuracy.”
 ```
 
@@ -79,6 +94,6 @@ The text passes G1–G9, but the runtime exposes no image generator.
 Expected behavior:
 
 - Full written output is delivered.
-- `REALITY COMPRESSION COMIC — Status: RENDER_PENDING` is explicit.
+- `JOHN TULD COMIC — Status: RENDER_PENDING` is explicit.
 - A complete panel-by-panel render brief follows.
 - The model never says the skill completed successfully and never labels Mermaid, ASCII, or a prompt as the comic.

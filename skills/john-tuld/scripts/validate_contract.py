@@ -17,7 +17,7 @@ REQUIRED_FILES = (
 )
 
 REQUIRED_SKILL_MARKERS = (
-    "name: reality-compression",
+    "name: john-tuld",
     "G1 Reality",
     "G10 Visual parity",
     "COMPLETE",
@@ -50,7 +50,7 @@ def main() -> int:
             print(f"ERROR: {error}")
         return 1
 
-    print("Reality Compression skill contract: PASS")
+    print("John Tuld skill contract: PASS")
     return 0
 
 

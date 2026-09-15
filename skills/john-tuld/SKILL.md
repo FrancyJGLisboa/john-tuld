@@ -1,25 +1,27 @@
 ---
-name: reality-compression
-description: "Reconstruct and compress a complex topic or supplied source into the smallest truthful causal model, then produce a coordinated written explanation and educational comic. Use when the user invokes /reality-compression, $reality-compression, Reality Compression, or explicitly asks for the General/AI Reality Compression Radar method. Do not use for ordinary summaries or image-only requests."
+name: john-tuld
+description: "Help analysts and technical specialists explain complex findings to executives and other nontechnical decision-makers. Turn a topic or supplied source into a plain-language executive brief and matching educational comic, preserving the mechanism, stakes, and uncertainty. Use for leadership briefings, communicating technical work upward, or explicit /john-tuld and $john-tuld requests. Do not use for ordinary summaries or image-only requests."
 ---
 
-# Reality Compression
+# John Tuld
 
-Turn a topic, question, or pasted source into a compact model for an English-speaking audience that remains useful for explanation, prediction, or decision. Complete both deliverables: rigorous English-language text and an English-language comic derived from the same model.
+Help the person who understands the technical work explain it to the person who must make decisions and communicate them onward. Reconstruct a topic, question, or supplied source into the smallest truthful model, then deliver a plain-language executive brief and an educational comic derived from that same model.
+
+The name refers to John Tuld, played by Jeremy Irons in *Margin Call* (2011), and his request for a golden-retriever-level explanation. Apply that demand for clarity: assume no technical prerequisites, respect the reader's intelligence, and keep every qualification that could change the decision.
 
 ## Invocation contract
 
 Accept any of these forms:
 
 ```text
-/reality-compression {topic or pasted content}
-$reality-compression {topic or pasted content}
-Reality Compression: {topic or pasted content}
+/john-tuld {topic or pasted content}
+$john-tuld {topic or pasted content}
+John Tuld: {topic or pasted content}
 ```
 
 Optional modes:
 
-- `--balanced` (default): compact, accessible, and rigorous.
+- `--balanced` (default): a compact executive briefing with plain language, stakes, and enough mechanism to judge the conclusion.
 - `--eli5`: minimize prerequisites without inventing certainty.
 - `--expert`: preserve technical vocabulary, equations, and edge cases that affect correctness.
 - `--decision`: organize compression around a stated decision and what would change it.
@@ -28,9 +30,19 @@ Optional modes:
 
 ## Audience and language
 
-The target audience is English-speaking. Produce the written explanation, section headings, comic brief, captions, labels, and all other instructional content in clear natural English, even when the request or supplied source is in another language. Preserve non-English proper names and quote source-language terms only when they are necessary to the explanation; translate or explain them in English. Use another output language only when the user explicitly requests it.
+The target audience is English-speaking and, by default, consists of executives, board members, or other senior stakeholders who do not work in the subject's technical details. The skill serves the analyst, engineer, researcher, or specialist preparing that communication. Adapt to a different audience when the user specifies one; `--expert` retains technical depth for specialist readers.
+
+Produce the written explanation, section headings, comic brief, captions, labels, and all other instructional content in clear natural English, even when the request or supplied source is in another language. Preserve non-English proper names and quote source-language terms only when they are necessary to the explanation; translate or explain them in English. Use another output language only when the user explicitly requests it.
 
 Do not infer the output language from the language of the prompt. Ask a question only when ambiguity would materially change the model and cannot be handled with explicit branches.
+
+## Communicating upward
+
+- Lead with the finding and its consequence. Connect to money, time, risk, customers, or operational capacity only when the evidence supports that connection; do not invent a business case or urgency.
+- Explain what changes what in ordinary words before naming the technical concept. Spell out necessary acronyms and explain numbers with their units, baseline, and time period when available.
+- Make the brief speakable in a meeting and usable without the comic. Put detailed derivations in a technical appendix when requested or when `--expert` or `--high-assurance` makes them useful.
+- State the decision or question for leadership when one exists. Separate the evidence from any recommendation, and say what missing information or changed assumption would alter the answer.
+- End with a sentence the stakeholder can repeat accurately to someone else. Use the film reference to guide clarity; roleplay, finance jargon, and a golden retriever character are not required in the output.
 
 ## Hard invariants
 
@@ -51,7 +63,7 @@ Do not infer the output language from the language of the prompt. Ask a question
 
 Perform these stages in order. They may remain internal unless a visible audit helps the user.
 
-1. **Frame the target.** Identify the phenomenon, desired mode, supplied evidence, time sensitivity, and any decision the model must support. Assume an English-speaking general audience unless the user specifies a different expertise level or explicitly requests another output language.
+1. **Frame the target.** Identify the phenomenon, desired mode, supplied evidence, time sensitivity, audience, and any decision the model must support. Assume an English-speaking nontechnical senior decision-maker unless the user specifies a different audience or explicitly requests another output language. If the decision or stakes are unknown, state that limitation without inventing them.
 2. **Reconstruct reality.** Determine the operative entities, constraints, incentives, sequence, feedback loops, and measurable outcomes. For supplied content, reconstruct the author's actual claim before evaluating it.
 3. **Resolve truth status.** Distinguish what the input says, what is externally established, what is inferred, and what remains uncertain. Retrieve current evidence when required and allowed. In `--from-source`, do not introduce unsupported outside claims.
 4. **Find the compression kernel.** Express the smallest causal model that still predicts the important behavior. Delete detail only if removing it does not change the model's conclusions in normal use.
@@ -86,26 +98,23 @@ For detailed pass/fail tests and repair actions, read [references/gates.md](refe
 Use this stable order, merging adjacent sections only when the content would otherwise be repetitive:
 
 ```text
-REALITY COMPRESSION — {TOPIC}
+JOHN TULD BRIEF — {TOPIC}
 
-1. The apparent complexity
-2. What is actually happening
-3. The smallest useful model
-4. The causal chain
-5. Crucial distinctions
-6. Evidence, inference, and uncertainty
-7. Concrete test
-8. Where the compression breaks
-9. Why it matters
-10. Compressed takeaway
+1. What you need to know — the finding and why it matters
+2. How it works — the smallest useful model, causal chain, and crucial distinctions
+3. One concrete example — the model in operation
+4. What could change this — evidence, inference, uncertainty, limits, and material omissions
+5. The decision and the sentence to repeat — the leadership question, if any, and a truthful takeaway
 
-REALITY COMPRESSION COMIC
+JOHN TULD COMIC
 Status: COMPLETE | RENDER_PENDING | BLOCKED
 [rendered comic, or the render brief when rendering is unavailable]
 ```
 
 Rules:
 
+- Keep the opening brief enough to say aloud in about one minute. Expand only where the audience or decision needs it; avoid a technical preamble.
+- When the source does not justify a decision or recommendation, say so. An explanatory request can end with the takeaway alone.
 - The smallest useful model should normally fit in one short paragraph or a compact causal chain.
 - Use a table only when exact comparison or truth-status mapping is clearer than prose.
 - Cite fresh or contested external claims when retrieval was used. Do not add citations to purely conceptual reasoning.

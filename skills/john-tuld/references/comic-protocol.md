@@ -2,6 +2,8 @@
 
 Use this protocol only after G1–G9 pass. The comic is the final compression layer.
 
+Default to a nontechnical senior stakeholder. Make the mechanism, consequence, and material uncertainty understandable through ordinary language and concrete visuals. A reader should not need the analyst present to decode the comic. Depict the subject being explained; the John Tuld name does not require film characters, a boardroom, or a golden retriever.
+
 ## 1. Extract the visual truth set
 
 Create a private list of no more than seven propositions the comic must preserve:
@@ -53,7 +55,7 @@ Use English for all visible text, including captions, speech, arrows, and labels
 
 ### ChatGPT reference path
 
-Use the native image generation tool in the same run. Supply the render brief and explicitly require a coherent multi-panel educational comic. After generation, display the image under `REALITY COMPRESSION COMIC`.
+Use the native image generation tool in the same run. Supply the render brief and explicitly require a coherent multi-panel educational comic. After generation, display the image under `JOHN TULD COMIC`.
 
 Inspect the rendered result when inspection is available. Regenerate once if any of these materially fail:
 

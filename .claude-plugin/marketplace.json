@@ -5,14 +5,14 @@
     "url": "https://github.com/FrancyJGLisboa"
   },
   "description": "Agent skills published by FrancyJGLisboa.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "plugins": [
     {
-      "name": "reality-compression",
-      "displayName": "Reality Compression",
+      "name": "john-tuld",
+      "displayName": "John Tuld",
       "source": "./",
-      "description": "Reconstruct complex topics into truthful causal models and matching educational comics.",
-      "version": "1.0.0",
+      "description": "Help analysts explain technical findings to senior decision-makers through plain-language briefs and matching educational comics.",
+      "version": "2.0.0",
       "author": {
         "name": "FrancyJGLisboa",
         "url": "https://github.com/FrancyJGLisboa"
@@ -22,9 +22,9 @@
       "license": "MIT",
       "category": "Productivity",
       "tags": [
-        "reasoning",
-        "education",
-        "research"
+        "executive-communication",
+        "technical-communication",
+        "reasoning"
       ]
     }
   ]

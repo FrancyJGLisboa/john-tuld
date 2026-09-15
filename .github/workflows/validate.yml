@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Validate skill contract
-        run: python3 skills/reality-compression/scripts/validate_contract.py skills/reality-compression
+        run: python3 skills/john-tuld/scripts/validate_contract.py skills/john-tuld
       - name: Validate plugin package
         run: python3 scripts/validate_package.py
       - name: Test installer

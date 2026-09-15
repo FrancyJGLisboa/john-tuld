@@ -1,7 +1,7 @@
 {
-  "name": "reality-compression",
-  "version": "1.0.0",
-  "description": "Reconstruct complex topics into truthful causal models and matching educational comics.",
+  "name": "john-tuld",
+  "version": "2.0.0",
+  "description": "Help analysts explain technical findings to senior decision-makers through plain-language briefs and matching educational comics.",
   "author": {
     "name": "FrancyJGLisboa",
     "url": "https://github.com/FrancyJGLisboa"
@@ -10,16 +10,17 @@
   "repository": "https://github.com/FrancyJGLisboa/reality-compression",
   "license": "MIT",
   "keywords": [
+    "executive-communication",
+    "technical-communication",
     "causal-reasoning",
-    "explanation",
     "agent-skill",
     "educational-comic"
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Reality Compression",
-    "shortDescription": "Compress complexity without distorting reality.",
-    "longDescription": "Reconstruct a topic, verify its causal mechanism, preserve uncertainty and limits, then produce a rigorous explanation and an educational comic from the same validated model.",
+    "displayName": "John Tuld",
+    "shortDescription": "Explain technical findings to senior decision-makers.",
+    "longDescription": "Turn complex analysis into an executive brief and an educational comic. Explain the mechanism, stakes, uncertainty, and leadership question in plain language, with a takeaway the listener can repeat accurately.",
     "developerName": "FrancyJGLisboa",
     "category": "Productivity",
     "capabilities": [
@@ -27,9 +28,9 @@
       "Image generation"
     ],
     "defaultPrompt": [
-      "Use $reality-compression to explain a complex topic and render its educational comic.",
-      "Use $reality-compression --decision to clarify this decision.",
-      "Use $reality-compression --expert to reconstruct this technical system."
+      "Use $john-tuld to explain these technical findings to nontechnical leadership and render the matching educational comic.",
+      "Use $john-tuld --decision to prepare a plain-language brief for this leadership decision.",
+      "Use $john-tuld --expert to reconstruct this system for a technical audience."
     ],
     "brandColor": "#5B4B8A"
   }

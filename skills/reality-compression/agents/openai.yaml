@@ -1,8 +1,0 @@
-interface:
-  display_name: "Reality Compression"
-  short_description: "Compress complexity without distorting reality"
-  brand_color: "#5B4B8A"
-  default_prompt: "Use $reality-compression to reconstruct and explain this topic, then generate the matching educational comic: {topic or pasted content}"
-
-policy:
-  allow_implicit_invocation: true

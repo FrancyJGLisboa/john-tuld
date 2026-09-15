@@ -1,0 +1,8 @@
+interface:
+  display_name: "John Tuld"
+  short_description: "Explain technical findings to senior decision-makers"
+  brand_color: "#5B4B8A"
+  default_prompt: "Use $john-tuld to turn these technical findings into a plain-language executive brief and matching educational comic: {topic or pasted content}"
+
+policy:
+  allow_implicit_invocation: true

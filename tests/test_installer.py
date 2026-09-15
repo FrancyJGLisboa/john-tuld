@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skills" / "reality-compression"
+SKILL = ROOT / "skills" / "john-tuld"
 INSTALLER = SKILL / "scripts" / "install.py"
 
 
@@ -38,8 +38,8 @@ class InstallerTests(unittest.TestCase):
                 str(claude_parent),
             )
             self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertTrue((codex_parent / "reality-compression" / "SKILL.md").is_file())
-            self.assertTrue((claude_parent / "reality-compression" / "SKILL.md").is_file())
+            self.assertTrue((codex_parent / "john-tuld" / "SKILL.md").is_file())
+            self.assertTrue((claude_parent / "john-tuld" / "SKILL.md").is_file())
 
     def test_refuses_unintentional_overwrite_and_allows_force(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

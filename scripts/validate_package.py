@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
-SKILL = ROOT / "skills" / "reality-compression"
+SKILL = ROOT / "skills" / "john-tuld"
 
 
 def load_json(relative: str) -> dict:
@@ -25,7 +25,7 @@ def main() -> int:
     errors: list[str] = []
 
     if not (SKILL / "SKILL.md").is_file():
-        errors.append("missing canonical skill: skills/reality-compression/SKILL.md")
+        errors.append("missing canonical skill: skills/john-tuld/SKILL.md")
 
     for relative in (".codex-plugin/plugin.json", ".claude-plugin/plugin.json"):
         try:
@@ -33,8 +33,8 @@ def main() -> int:
         except RuntimeError as error:
             errors.append(str(error))
             continue
-        if manifest.get("name") != "reality-compression":
-            errors.append(f"{relative}: name must be reality-compression")
+        if manifest.get("name") != "john-tuld":
+            errors.append(f"{relative}: name must be john-tuld")
         if manifest.get("version") != VERSION:
             errors.append(f"{relative}: version must match VERSION ({VERSION})")
 
@@ -44,8 +44,8 @@ def main() -> int:
         errors.append(str(error))
     else:
         entries = marketplace.get("plugins", [])
-        if len(entries) != 1 or entries[0].get("name") != "reality-compression":
-            errors.append("Claude marketplace must expose exactly reality-compression")
+        if len(entries) != 1 or entries[0].get("name") != "john-tuld":
+            errors.append("Claude marketplace must expose exactly john-tuld")
         elif entries[0].get("version") != VERSION:
             errors.append("Claude marketplace version must match VERSION")
 
